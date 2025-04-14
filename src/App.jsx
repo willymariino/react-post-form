@@ -18,12 +18,12 @@ function App() {
 
     // 1) prendere il valore corretto in base al tipo
     let value;
-    if (event.target.value.type === "checkbox") {
-      value = event.taget.checked // se il campo è una checkbox, react non usa value, ma checkbox.}
+    if (event.target.type === "checkbox") {
+      value = event.target.checked // se il campo è una checkbox, react non usa value, ma checkbox.}
     }
 
     else {
-      value.target.value
+      value = event.target.value
     }
 
 
@@ -39,9 +39,7 @@ function App() {
       [event.target.name]: value
 
 
-    })
-
-    )
+    }))
 
 
   }
