@@ -64,78 +64,21 @@ function App() {
 
       <h1>React Multi Form</h1>
 
-
-      {/* <div>
-  <label htmlFor="pizza-element">Pizza</label>
-  <input type="text" id="pizza-element" placeholder="Nome della pizza" value={pizzaName} onChange={handlePizzaName} />
-</div>
-
-<hr />
-
-<div>
-  <label htmlFor="price-element">Price</label>
-  <input type="number" id="price-element" placeholder="Prezzo della pizza" value={pizzaPrice} onChange={handlePizzaPrice} />
-</div> */}
-
-
-      <form action="" onSubmit={savePizza}>
+      <form action="" onSubmit={addPosts}>
 
         <div>
           <label htmlFor="pizza-element">Pizza</label>
-          <input type="text" id="pizza-element" placeholder="Nome della pizza" value={formPizza.title} onChange={handlePizza} name="title" />
+          <input
+            type="text"
+            name="author"
+            value={formPosts.author}
+            onChange={handleFormData}
+            placeholder="autore"
+          />
         </div>
-
-        <hr />
-
-
-        <div>
-          <label htmlFor="ingredients-element">Ingredienti</label>
-          <input type="text" id="ingredients-element" placeholder="Ingredienti della pizza" value={formPizza.ingredients} onChange={handlePizza} name="ingredients" />
-        </div>
-
-        <hr />
-
-        <div>
-          <label htmlFor="price-element">Price</label>
-          <input type="number" id="price-element" placeholder="Prezzo della pizza" value={formPizza.price} onChange={handlePizza} name="price" />
-        </div>
-
-        <hr />
-
-        <div>
-          <label htmlFor="available-element">Available</label>
-          <input type="checkbox" id="available-element" checked={formPizza.available} onChange={handlePizza} name="available" />
-        </div>
-
-
-        <button>Salva la pizza</button>
       </form>
 
-      <hr />
 
-
-      <section>
-        <h2>
-          Dati della pizza in aggiornamento
-        </h2>
-        <p>Title: {formPizza.title}</p>
-        <p>Ingredients: {formPizza.ingredients}</p>
-        <p>Price; {formPizza.price} €</p>
-        <p>Available: {formPizza.available ? <div>Disponibile</div> : <div>Non disponibile</div>}</p>
-      </section>
-
-      <hr />
-
-
-      <section>
-        <h2>
-          Menu
-        </h2>
-        <ul>
-          {menuPizze.length ? menuPizze.map((pizza, index) => <li>{pizza.title}</li>) : <li>Pizze non trovate</li>}
-        </ul>
-
-      </section>
 
     </>
   )
