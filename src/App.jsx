@@ -45,6 +45,7 @@ function App() {
   }
 
   function addPosts(e) {
+    e.preventDefault()
     axios.post("https://67c5b4f3351c081993fb1ab6.mockapi.io/api/posts", formPosts)
       .then((res) => {
         console.log("post aggiunto")
@@ -64,7 +65,7 @@ function App() {
 
       <h1>React Multi Form</h1>
 
-      <form action="" onSubmit={addPosts}>
+      <form onSubmit={addPosts}>
 
         <div>
           <label>author</label>
