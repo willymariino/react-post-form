@@ -108,6 +108,8 @@ function App() {
             onChange={handleFormData}
           />
         </div>
+
+        <button>invia</button>
       </form>
 
 
