@@ -50,9 +50,9 @@ function App() {
       .then((res) => {
         console.log("post aggiunto")
         setFormPosts({
-          author: "author",
-          title: "title",
-          body: "testo del post",
+          author: "",
+          title: "",
+          body: "",
           public: false
         })
       })
