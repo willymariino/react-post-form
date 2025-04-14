@@ -67,13 +67,45 @@ function App() {
       <form action="" onSubmit={addPosts}>
 
         <div>
-          <label htmlFor="pizza-element">Pizza</label>
+          <label>author</label>
           <input
             type="text"
             name="author"
             value={formPosts.author}
             onChange={handleFormData}
             placeholder="autore"
+          />
+        </div>
+
+        <div>
+          <label>title</label>
+          <input
+            type="text"
+            name="title"
+            value={formPosts.title}
+            onChange={handleFormData}
+            placeholder="title"
+          />
+        </div>
+
+        <div>
+          <label>body</label>
+          <input
+            type="text"
+            name="body"
+            value={formPosts.body}
+            onChange={handleFormData}
+            placeholder="body"
+          />
+        </div>
+
+        <div>
+          <label>public</label>
+          <input
+            type="checkbox"
+            name="public"
+            checked={formPosts.public}
+            onChange={handleFormData}
           />
         </div>
       </form>
