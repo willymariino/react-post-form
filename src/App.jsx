@@ -7,9 +7,9 @@ function App() {
 
 
   const [formPosts, setFormPosts] = useState({
-    author: "author",
-    title: "title",
-    body: "testo del post",
+    author: "",
+    title: "",
+    body: "",
     public: false
 
   })
@@ -48,7 +48,7 @@ function App() {
     e.preventDefault()
     axios.post("https://67c5b4f3351c081993fb1ab6.mockapi.io/api/posts", formPosts)
       .then((res) => {
-        console.log("post aggiunto")
+        console.log("post aggiunto", res.data)
         setFormPosts({
           author: "",
           title: "",
