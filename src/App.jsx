@@ -41,18 +41,24 @@ function App() {
 
     }))
 
-    function addPosts() {
-      axios.post("https://67c5b4f3351c081993fb1ab6.mockapi.io/api/posts", {
-        author: "author",
-        title: "title",
-        body: "testo del post",
-        public: false
-      })
-        .then((res) => setFormPosts(res.data))
-        .catch((error) => console.error("errore durante la chiamata API", error))
-    }
 
   }
+
+  function addPosts(e) {
+    axios.post("https://67c5b4f3351c081993fb1ab6.mockapi.io/api/posts", formPosts)
+      .then((res) => {
+        console.log("post aggiunto")
+        setFormPosts({
+          author: "author",
+          title: "title",
+          body: "testo del post",
+          public: false
+        })
+      })
+
+      .catch((error) => console.error("errore durante la chiamata API", error))
+  }
+
   return (
     <>
 
