@@ -42,8 +42,11 @@ function App() {
     }))
 
     function addPosts() {
-      axios.post("https://67c5b4f3351c081993fb1ab6.mockapi.io/api/posts")
-
+      axios.post('"https://67c5b4f3351c081993fb1ab6.mockapi.io/api/posts"', {
+        author: "author",
+        title: "title",
+        body: "testo del post"
+      })
         .then((res) => setFormPosts(res.data))
         .catch((error) => console.error("errore durante la chiamata API", error))
     }
