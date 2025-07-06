@@ -1,0 +1,24 @@
+.multi-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.input {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    max-width: 22%;
+    border: 1px solid #cce7ff;
+    background-color: #f8fcff;
+    border-radius: 35px;
+    padding: 1%;
+}
+
+.send-btn {
+    max-width: 60px;
+    border: none;
+    background-color: #3551f1;
+    border-radius: 35px;
+    color: white;
+}
