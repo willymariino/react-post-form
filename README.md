@@ -2,7 +2,7 @@
 [![Live Demo](https://img.shields.io/badge/live-demo-brightgreen)](https://react-post-multiform.netlify.app/)
 
 ## Project Overview
-This project is a React-based application built with Vite, designed to explore the concept of multi-field forms.  
+This project is a React-based application, designed to explore the concept of multi-field forms.  
 It allows users to create posts by filling out a form with multiple fields, submit the data via an HTTP POST request to an external API using Axios, and then display the submitted posts directly on the page.
 
 ## Features
